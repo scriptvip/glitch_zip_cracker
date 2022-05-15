@@ -193,7 +193,7 @@ try:
 #    else:
 #        wordlist = input("   Enter Wordlist: ")
 #        print("    ")
-    zip_file = zipfile.ZipFile(zip_filee)
+    zip_file = zipfile.ZipFile(zip_file)
 #    print("  ")
 #    print("   file selected [!] ")
 
