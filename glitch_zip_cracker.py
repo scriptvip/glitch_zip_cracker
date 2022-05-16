@@ -154,6 +154,8 @@ try:
                     url="https://www.mediafire.com/file/w6zi9jim4d4q6ux/wordlist.txt/file"
                     output="wordlist.txt"
                     mediafire_dl.download(url, output, quiet=False)
+                    word_show=On_Green+" "+wordlist+"  "
+                    banner()
                 except requests.exceptions.ConnectionError:
                     print("  ")
                     print("   Connection Error [!]")
@@ -227,7 +229,8 @@ try:
                 exit(0)
     print(Yellow+"[!] Password not found, try other wordlist.")
 except FileNotFoundError:
-    print("      file not found [!]")
+    print (" ")
+    print(Red+"      file not found [!]")
     print("  ")
 except KeyboardInterrupt:
     print(" ")
@@ -235,6 +238,6 @@ except KeyboardInterrupt:
     print("  ")
 except zipfile.BadZipFile:
     print(" ")
-    print("  File Not Found")
+    print(Red+"  File Not Found")
     print("  ")
 print("                                       ")
