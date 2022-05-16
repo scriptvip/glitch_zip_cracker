@@ -156,9 +156,10 @@ try:
                     mediafire_dl.download(url, output, quiet=False)
                     word_show=On_Green+" "+wordlist+"  "
                     banner()
-                except requests.exceptions.ConnectionError:
+                except:
                     print("  ")
-                    print("   Connection Error [!]")
+                    print(Red+"   Connection Error [!]")
+                    print(" ")
             pass
 #    data=open('data.txt', 'r')
  #   zip_path=data.read()
@@ -229,15 +230,11 @@ try:
                 exit(0)
     print(Yellow+"[!] Password not found, try other wordlist.")
 except FileNotFoundError:
-    print (" ")
-    print(Red+"      file not found [!]")
     print("  ")
 except KeyboardInterrupt:
     print(" ")
     print(Red+"   script stop !")
     print("  ")
 except zipfile.BadZipFile:
-    print(" ")
-    print(Red+"  File Not Found")
     print("  ")
 print("                                       ")
